@@ -44,54 +44,5 @@ You should recieve the following: the last 10 earnings events in our training da
         "eps": -0.07,
         "epsEstimated": -0.02,
         "percentSurprise": -250.0
-    },
-    {
-        "symbol": "CALM",
-        "eps": 0.02,
-        "epsEstimated": 0.28,
-        "percentSurprise": -92.85714285714285
-    },
-    {
-        "symbol": "VAXX",
-        "eps": -0.44,
-        "epsEstimated": -0.12,
-        "percentSurprise": -266.6666666666667
-    },
-    {
-        "symbol": "PAYX",
-        "eps": 0.91,
-        "epsEstimated": 0.8,
-        "percentSurprise": 13.749999999999998
-    },
-    {
-        "symbol": "AVO",
-        "eps": 0.24,
-        "epsEstimated": 0.3,
-        "percentSurprise": -20.0
-    },
-    {
-        "symbol": "MSM",
-        "eps": 1.25,
-        "epsEstimated": 1.19,
-        "percentSurprise": 5.042016806722694
-    },
-    {
-        "symbol": "KMX",
-        "eps": 1.63,
-        "epsEstimated": 1.44,
-        "percentSurprise": 13.194444444444443
-    },
-    {
-        "symbol": "CTAS",
-        "eps": 2.76,
-        "epsEstimated": 2.65,
-        "percentSurprise": 4.150943396226411
-    },
-    {
-        "symbol": "FDS",
-        "eps": 3.25,
-        "epsEstimated": 2.99,
-        "percentSurprise": 8.695652173913036
-    }
-]
+    } ...
 ```
