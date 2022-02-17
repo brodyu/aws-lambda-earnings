@@ -10,7 +10,13 @@ The event-driven function is built on these frameworks and platforms:
 * PyMySQL
 
 ## Data
-The data we will be returning is the most recent earnings data from the training dataset stored on our RDS database. We will query and execute commands via SQL and calculate the earnings surprise percentage for those most recent earnings events. 
+The data we will be returning is the most recent earnings data from the training dataset stored on our RDS database. We will query and execute commands via SQL and calculate the earnings surprise percentage for those most recent earnings events:
+``` sql
+SELECT symbol, eps, epsEstimated, (eps - epsEstimated) / ABS(epsEstimated) * 100 AS percentSurprise
+FROM train_agg
+ORDER BY STR_TO_DATE(`date`, '%c/%e/%y') DESC
+LIMIT 10
+```
 
 The earnings surprise percentage is calculated by taking the percentage change between the acutal EPS and the estimated EPS: 
 ```Python
