@@ -23,3 +23,7 @@ The earnings surprise percentage is calculated by taking the percentage change b
 percentSurprise = (eps - eps_estimated) / eps_estimated * 100
 ```
 
+## Input
+HTTP requests are sent through to AWS' API Gateway tool. The gateway is setup to only accept GET requests at the moment.
+
+<img width="714" alt="Screen Shot 2022-02-16 at 10 15 36 PM" src="https://user-images.githubusercontent.com/45079557/154433766-246d1e70-c3d0-45f7-af51-21a099ce3016.png">
