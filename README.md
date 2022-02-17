@@ -22,3 +22,4 @@ The earnings surprise percentage is calculated by taking the percentage change b
 ```Python
 percentSurprise = (eps - eps_estimated) / eps_estimated * 100
 ```
+
