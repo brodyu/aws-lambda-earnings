@@ -3,6 +3,8 @@
 ## Idea
 This project is an extension of our RDS ETL pipeline project. In this project, we are creating a RESTful API endpoint in Python using AWS' serverless infrastructure, Lambda. Lambda will allow us to run python code based on the occurence of an event. Here, our event will be a HTTP GET request sent through AWS' API Gateway. 
 
+![lambda](https://user-images.githubusercontent.com/45079557/154608235-4206f9ae-a29d-4244-9246-2fa048883eae.png)
+
 ## Built With
 The event-driven function is built on these frameworks and platforms:
 * AWS: RDS (MySQL Database), Lambda, API Gateway, Parameter Store
