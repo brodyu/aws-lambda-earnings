@@ -46,3 +46,5 @@ You should recieve the following: the last 10 earnings events in our training da
         "percentSurprise": -250.0
     } ...
 ```
+## Future Plans:
+* Use Lambda to predict eps surprise thresholds through a trained ML model
