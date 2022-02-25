@@ -1,9 +1,13 @@
 import json
 import boto3
 import pymysql
+import pandas as pd
+import pickle
+import sklearn
 
 def lambda_handler(event, context):
     GET_RAW_PATH = "/getHistoricalEarnings"
+    POST_RAW_PATH = "/predictEPS"
     # Connect to boto3 and pull parameters
     client = boto3.client('ssm')
     response = client.get_parameters(Names=[
@@ -43,4 +47,26 @@ def lambda_handler(event, context):
             },
             "body": json.dumps(data)
         }
+    elif event['rawPath'] == POST_RAW_PATH:
+        print("Start Request for predictEPS")
+        decoded_event = json.loads(event["body"])
+        # Manipulate input for model reading
+        input_df = pd.Series(decoded_event).to_frame().T
         
+        print("Trying to connect model")
+        s3_client = boto3.client("s3")
+        
+        #Using Pickle + load model from s3
+        filename = "earnings_surprise_random_forest.pkl"
+        s3_client.download_file('rfmodelpkl', filename, '/tmp/' + filename)  
+        loaded_model = pickle.load(open('/tmp/' + filename, 'rb'))
+        
+        result = loaded_model.predict(input_df)[0]
+        print("Success")
+        return {
+            "statusCode": 200,
+            "headers": {
+                "content-type":"application/json"
+            },
+            "body": json.dumps(result)
+        }
