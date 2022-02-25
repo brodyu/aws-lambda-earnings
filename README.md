@@ -48,7 +48,7 @@ You should recieve the following: the last 10 earnings events in our training da
         "percentSurprise": -250.0
     } ...
 ```
-# POST /predictEPS
+# POST /predictEPS Endpoint
 In our predicting-earnings-surprises repository, we trained and tested a random forest regressor that takes in 35 inputs (inputs comprised of earnings & pricing data) and saved the model as a pkl file to our AWS S3 bucket. Within our lambda function, we can now gather this model from S3 and use it to predict the EPS of an upcoming earnings annoucement. 
 
 ## Input
