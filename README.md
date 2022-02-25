@@ -93,10 +93,11 @@ The POST request is sent via AWS' API Gateway and requires a request body with t
     "year": 2022
 }
 ```
-Running this request through:
+Try it out:
 * URL: https://mbtnvb29hk.execute-api.us-west-2.amazonaws.com
 * Send a POST request to the /predictEPS endpoint
-Yields our estimated earnings per share of:
+
+Running the request above yields our estimated earnings per share of:
 ```json
 -1.326
 ```
