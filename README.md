@@ -12,7 +12,6 @@ The event-driven function is built on these frameworks and platforms:
 * PyMySQL
 
 # GET /getHistoricalEarnings Endpoint
-## Data
 The data we will be returning is the most recent earnings data from the training dataset stored on our RDS database. We will query and execute commands via SQL and calculate the earnings surprise percentage for those most recent earnings events:
 ```sql
 SELECT symbol, eps, epsEstimated, (eps - epsEstimated) / ABS(epsEstimated) * 100 AS percentSurprise
