@@ -7,7 +7,7 @@ This project is an extension of our RDS ETL pipeline project. In this project, w
 
 ## Built With
 The event-driven function is built on these frameworks and platforms:
-* AWS: RDS (MySQL Database), Lambda, API Gateway, Parameter Store
+* AWS: RDS (MySQL Database), Lambda, API Gateway, S3
 * Python 3.8
 * PyMySQL
 
