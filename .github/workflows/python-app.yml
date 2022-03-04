@@ -32,4 +32,4 @@ jobs:
         coverage run -m pytest --verbose
     - name: Code coverage report
       run: |
-        coverage report -m --omit="*/test*"
+        coverage report -m
