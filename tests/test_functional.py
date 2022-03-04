@@ -1,7 +1,7 @@
-import pytest
 import requests
 import json
 import pandas as pd
+
 
 def test_get_request():
     url = "https://mbtnvb29hk.execute-api.us-west-2.amazonaws.com/getHistoricalEarnings"
